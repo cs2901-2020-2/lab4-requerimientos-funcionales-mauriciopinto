@@ -13,17 +13,20 @@ public class  DNASequencer {
 
     public String calculate(List<String> part){
         String complete_sequence = "";
-        int i;
+        int current_letter, next_letter, first = 0;
         int total_chains = part.size ();
         for (int j = 0; j < total_chains - 1; j++) {
-            i = 0;
+            current_letter = first;
             String current_chain = part.get (j);
             String next_chain = part.get (j + 1);
-            while (current_chain.charAt(i) != next_chain.charAt(0)) {
-                complete_sequence += current_chain.charAt(i);
-                if (current_chain.charAt(i + 1) == current_chain.charAt(i + 2))
-                    complete_sequence+= current_chain.charAt(i + 1);
-                i++;
+            while (current_chain.charAt(current_letter) != next_chain.charAt(first)) {
+                complete_sequence += current_chain.charAt(current_letter);
+                next_letter = current_letter + 1;
+                if (current_chain.charAt(next_letter) == next_chain.charAt(first)) {
+                    if (current_chain.charAt(next_letter) == current_chain.charAt(next_letter + 1))
+                        complete_sequence += current_chain.charAt(current_letter + 1);
+                }
+                current_letter++;
             }
         }
         complete_sequence += part.get(total_chains - 1);
