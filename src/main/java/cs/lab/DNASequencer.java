@@ -11,23 +11,18 @@ public class  DNASequencer {
         logger.info("Starting sequencer...");
     }
 
-    /*public void main (String args[]) {
-        List<String> part = new ArrayList<String>();
-        part.add()
-    }*/
     public String calculate(List<String> part){
         String complete_sequence = "";
         int i;
         int total_chains = part.size ();
-        /*for (int k = 0; k < total_chains; k++) {
-            System.out.println(part.get(k));
-        }*/
         for (int j = 0; j < total_chains - 1; j++) {
             i = 0;
             String current_chain = part.get (j);
-            String next_chain = part.get (j + i);
+            String next_chain = part.get (j + 1);
             while (current_chain.charAt(i) != next_chain.charAt(0)) {
                 complete_sequence += current_chain.charAt(i);
+                if (current_chain.charAt(i + 1) == current_chain.charAt(i + 2))
+                    complete_sequence+= current_chain.charAt(i + 1);
                 i++;
             }
         }
