@@ -16,7 +16,7 @@ import java.io.FileWriter;
 public class DNASequencerTest {
     public int MAX_SUBSEQUENCES = 180000;
 
-    public void testCase0() throws IOException, Exception {
+    public void testCase0() throws Exception {
         generic(0);
     }
 
