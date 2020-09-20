@@ -2,7 +2,6 @@ package cs.lab;
 
 import java.util.List;
 import java.util.logging.Logger;
-import java.util.ArrayList;
 
 public class  DNASequencer {
 
@@ -11,25 +10,34 @@ public class  DNASequencer {
         logger.info("Starting sequencer...");
     }
 
-    public String calculate(List<String> part){
-        String complete_sequence = "";
-        int current_letter, next_letter, first = 0;
-        int total_chains = part.size ();
-        for (int j = 0; j < total_chains - 1; j++) {
-            current_letter = first;
-            String current_chain = part.get (j);
-            String next_chain = part.get (j + 1);
-            while (current_chain.charAt(current_letter) != next_chain.charAt(first)) {
-                complete_sequence += current_chain.charAt(current_letter);
-                next_letter = current_letter + 1;
-                if (current_chain.charAt(next_letter) == next_chain.charAt(first)) {
-                    if (current_chain.charAt(next_letter) == current_chain.charAt(next_letter + 1))
-                        complete_sequence += current_chain.charAt(current_letter + 1);
+    public String calculate(List<String> part) throws MaxSubsequenceException, EmptyListException, SubseqLengthException {
+        String completeSequence = "";
+        int currentLetter, nextLetter, first = 0;
+        int totalChains = part.size ();
+        if (totalChains > 160000)
+            throw new MaxSubsequenceException("Too many Subsequences");
+        if (totalChains == 0)
+            throw new EmptyListException("No subsequences passed!");
+        for (int j = 0; j < totalChains - 1; j++) {
+            currentLetter = first;
+            String currentChain = part.get (j);
+            String nextChain = part.get (j + 1);
+            if (currentChain.length() > 200)
+                throw new SubseqLengthException("Subsequence too large!");
+            while (currentChain.charAt(currentLetter) != nextChain.charAt(first)) {
+                completeSequence += currentChain.charAt(currentLetter);
+                nextLetter = currentLetter + 1;
+                if (currentChain.charAt(nextLetter) == nextChain.charAt(first)) {
+                    if (currentChain.charAt(nextLetter) == currentChain.charAt(nextLetter + 1))
+                        completeSequence += currentChain.charAt(currentLetter + 1);
                 }
-                current_letter++;
+                currentLetter++;
             }
         }
-        complete_sequence += part.get(total_chains - 1);
-        return complete_sequence;
+        String lastChain = part.get (totalChains - 1);
+        if (lastChain.length() > 200)
+            throw new SubseqLengthException("Subsequence too large!");
+        completeSequence += lastChain;
+        return completeSequence;
     }
 }

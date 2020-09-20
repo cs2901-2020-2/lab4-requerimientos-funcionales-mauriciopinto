@@ -24,7 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e932e8cd-2fe8-49c4-b205-1ad0953cc584" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cs/lab/DNASequencer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cs/lab/DNASequencer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cs/lab/DNASequencerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cs/lab/DNASequencerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +59,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
   </component>
   <component name="RunManager" selected="TestNG.DNASequencerTest">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -82,13 +89,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,7 +168,10 @@
       <option name="presentableId" value="Default" />
       <updated>1600228064189</updated>
       <workItem from="1600228065558" duration="5421000" />
-      <workItem from="1600265773818" duration="3573000" />
+      <workItem from="1600265773818" duration="5072000" />
+      <workItem from="1600347877410" duration="6041000" />
+      <workItem from="1600404815919" duration="7731000" />
+      <workItem from="1600634897211" duration="1034000" />
     </task>
     <servers />
   </component>
@@ -176,32 +188,41 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="462" y="198" width="1084" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600267776387">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="462" y="198" width="1084" height="780" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600267776387" />
+    <state x="677" y="344" width="566" height="385" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600353380601">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="677" y="344" width="566" height="385" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600353380601" />
     <state x="692" y="411" width="525" height="409" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1600267352763">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="692" y="411" width="525" height="409" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600267352763" />
-    <state width="1878" height="290" key="GridCell.Tab.0.bottom" timestamp="1600269253964">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="276" key="GridCell.Tab.0.bottom" timestamp="1600453700078">
+      <screen x="0" y="0" width="1920" height="1039" />
     </state>
-    <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600269253964" />
-    <state width="1878" height="290" key="GridCell.Tab.0.center" timestamp="1600269253964">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1039@0.0.1920.1039" timestamp="1600453700078" />
+    <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600270880178" />
+    <state width="1878" height="276" key="GridCell.Tab.0.center" timestamp="1600453700077">
+      <screen x="0" y="0" width="1920" height="1039" />
     </state>
-    <state width="1878" height="290" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600269253964" />
-    <state width="1878" height="290" key="GridCell.Tab.0.left" timestamp="1600269253964">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="276" key="GridCell.Tab.0.center/0.0.1920.1039@0.0.1920.1039" timestamp="1600453700077" />
+    <state width="1878" height="290" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600270880178" />
+    <state width="1878" height="276" key="GridCell.Tab.0.left" timestamp="1600453700077">
+      <screen x="0" y="0" width="1920" height="1039" />
     </state>
-    <state width="1878" height="290" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600269253964" />
-    <state width="1878" height="290" key="GridCell.Tab.0.right" timestamp="1600269253964">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="276" key="GridCell.Tab.0.left/0.0.1920.1039@0.0.1920.1039" timestamp="1600453700077" />
+    <state width="1878" height="290" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600270880177" />
+    <state width="1878" height="276" key="GridCell.Tab.0.right" timestamp="1600453700078">
+      <screen x="0" y="0" width="1920" height="1039" />
     </state>
-    <state width="1878" height="290" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600269253964" />
+    <state width="1878" height="276" key="GridCell.Tab.0.right/0.0.1920.1039@0.0.1920.1039" timestamp="1600453700078" />
+    <state width="1878" height="290" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1600270880178" />
   </component>
   <component name="masterDetails">
     <states>
